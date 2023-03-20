@@ -1,0 +1,16 @@
+utils::citHeader(sprintf("To cite %s in publications, please use:", meta[["Package"]]))
+
+utils::citEntry(
+  entry = "TechReport",
+  title = "inlcolor---Color palettes for the U.S. Geological Survey Idaho National Laboratory Project Office",
+  author = eval(parse(text = meta[["Authors@R"]])),
+  institution = "U.S. Geological Survey",
+  type = "Software Release",
+  year = "2023",
+  note = sprintf("R package version %s", meta[["Version"]]),
+  address = "Reston, Va.",
+  doi = "10.5066/P93BDACR",
+  url = "https://doi.org/10.5066/P93BDACR",
+  key = "inlcolor-package",
+  textVersion = "Fisher, J.C., 2023, inlcolor---Color palettes for the U.S. Geological Survey Idaho National Laboratory Project Office: U.S. Geological Survey software release, R package, Reston, Va., https://doi.org/10.5066/P93BDACR."
+)
