@@ -1,42 +1,46 @@
-# inlcolor
+inlcolor <img src="man/figures/logo.svg" alt="inlcolor" align="right" width="152px" />
+======================================================================================
 
-[![USGS
-Category](https://img.shields.io/badge/USGS-Research-blue.svg)](https://owi.usgs.gov/R/packages.html#research)
-[![CRAN
-Version](https://www.r-pkg.org/badges/version/inlcolor)](https://CRAN.R-project.org/package=inlcolor)
-[![pipeline
-status](https://code.usgs.gov/inl/inlcolor/badges/main/pipeline.svg)](https://code.usgs.gov/inl/inlcolor/-/commits/main)
-[![coverage
-report](https://code.usgs.gov/inl/inlcolor/badges/main/coverage.svg)](https://code.usgs.gov/inl/inlcolor/-/commits/main)
+[![cran-version-image](https://www.r-pkg.org/badges/version/inlcolor)](https://CRAN.R-project.org/package=inlcolor)
+[![pipeline-status-image](https://code.usgs.gov/inl/inlcolor/badges/main/pipeline.svg)](https://code.usgs.gov/inl/inlcolor/-/commits/main)
+[![coverage-status-image](https://code.usgs.gov/inl/inlcolor/badges/main/coverage.svg)](https://code.usgs.gov/inl/inlcolor/-/commits/main)
 
-## Description
+Description
+-----------
 
-The [R](https://www.r-project.org/) package **inlcolor** provides access
-to a variety of color schemes. Used to support packages and scripts
-written by researchers at the United States Geological Survey (USGS)
-Idaho National Laboratory Project Office
+The **inlcolor** package is an [R](https://www.r-project.org/) package
+that provides access to a variety of color schemes. It is designed to
+support packages and scripts written by researchers at the United States
+Geological Survey (USGS) Idaho National Laboratory Project Office
 ([INLPO](https://www.usgs.gov/centers/idaho-water-science-center/science/idaho-national-laboratory-project-office)).
-Key features of this package are (1) a simple and consistent API, (2)
-support for qualitative, diverging, and sequential color schemes, (3)
-support for combining color pallets using a hinge location, (4)
-simulates color blindness, and (5) has few dependencies. The goal of
-**inlcolor** is to be a single comprehensive collection of color schemes
-for maps and graphs in INLPO publications.
+The package has a simple and consistent API, and supports qualitative,
+diverging, and sequential color schemes. It also supports combining
+color palettes using a hinge location, simulates color blindness, and
+has few dependencies. The goal of **inlcolor** is to be a single
+comprehensive collection of color schemes for maps and graphs in INLPO
+publications.
 
-![](man/figures/colors.png)
+Installation
+------------
 
-## Installation
-
-The current release is available on
-[CRAN](https://CRAN.R-project.org/package=inlcolor), which you can
-install using the following command:
+To install the current release of the package from
+[CRAN](https://CRAN.R-project.org/package=inlcolor) you can use the
+following command in R:
 
 ``` r
 install.packages("inlcolor")
 ```
 
-To install the development version, you need to clone the repository and
-build from source, or run:
+To install the package along with its dependencies, which are required
+to run examples in the package help documentation and simulate
+partial-color blindness, run:
+
+``` r
+install.packages("inlcolor", dependencies = TRUE)
+```
+
+To install the development version of the package, you need to clone the
+repository and build from source, or run the following commands:
 
 ``` r
 if (!requireNamespace("remotes")) install.packages("remotes")
@@ -48,44 +52,52 @@ remotes::install_gitlab(
 )
 ```
 
-## Usage
+Usage
+-----
 
 The package provides two main functions for interacting with color
 palettes:
 
--   `get_colors` is used to create a vector of `n` colors from
-    qualitative, diverging, and sequential color schemes; and
--   `set_hinge` is used to set a *hinge* location within a color
-    palette.
-
-A hinge is a dramatic change in the colors at a location appropriate for
-your data (such as, at sea level). Examples are given in the package
-help pages. To access these documents, run:
+-   `get_colors` This function is used to create a vector of `n` colors
+    from the specified color scheme. The function supports qualitative,
+    diverging, and sequential color schemes. The maximum number of
+    colors in a generated palette is dependent on the specified color
+    scheme. The function also supports alpha transparency, color stops,
+    interpolation bias, and color blindness simulation.
+-   `set_hinge` This function is used to set a *hinge* location within a
+    color palette. A hinge is a dramatic change in the colors at a
+    location appropriate for your data (such as, at sea level). Examples
+    are given in the package help pages. To access these documents, run:
 
 ``` r
 library("inlcolor")
 help(package = "inlcolor")
 ```
 
-## Authors
+Authors
+-------
 
-Jason C. Fisher ([ORCID iD
-0000-0001-9032-8912](https://orcid.org/0000-0001-9032-8912))
+Jason C. Fisher (ORCID iD
+[0000-0001-9032-8912](https://orcid.org/0000-0001-9032-8912))
 
-## Point of Contact
+Point of Contact
+----------------
 
-Jason C. Fisher (<jfisher@usgs.gov>)
+Jason C. Fisher
+(<a href="mailto:jfisher@usgs.gov" class="email">jfisher@usgs.gov</a>)
 
-## Suggested Citation
+Suggested Citation
+------------------
 
 To cite **inlcolor** in publications, please use:
 
 Fisher, J.C., 2023, inlcolor—Color palettes for the U.S. Geological
 Survey Idaho National Laboratory Project Office: U.S. Geological Survey
 software release, R package, Reston, Va.,
-<https://doi.org/10.5066/P93BDACR>.
+<a href="https://doi.org/10.5066/P93BDACR" class="uri">https://doi.org/10.5066/P93BDACR</a>.
 
-## Contributing
+Contributing
+------------
 
 We welcome your contributions and suggestions for how to make these
 materials more useful to the community. Please feel free to comment on
@@ -93,7 +105,8 @@ the [issue tracker](https://code.usgs.gov/inl/inlcolor/-/issues) or open
 a [merge request](https://code.usgs.gov/inl/inlcolor/-/merge_requests)
 to contribute.
 
-## Code of Conduct
+Code of Conduct
+---------------
 
 All contributions to- and interactions surrounding- this project will
 abide by the [USGS Code of Scientific
@@ -101,7 +114,8 @@ Conduct](https://www.usgs.gov/office-of-science-quality-and-integrity/fundamenta
 
 <!-- Embedded References -->
 
-## Disclaimer
+Disclaimer
+----------
 
 This software is preliminary or provisional and is subject to revision.
 It is being provided to meet the need for timely best science. The
@@ -116,7 +130,8 @@ authorized or unauthorized use of the software.
 Any use of trade, product, or firm names is for descriptive purposes
 only and does not imply endorsement by the U.S. Government.
 
-## License
+License
+-------
 
 Unless otherwise noted, this project is in the public domain in the
 United States because it contains materials that originally came from
@@ -157,7 +172,8 @@ the author or the affirmer.
 
 <!-- Embedded References -->
 
-## Support
+Support
+-------
 
 The Idaho National Laboratory Project Office of the USGS supports the
 development and maintenance of **inlcolor**. Resources are available
@@ -165,7 +181,8 @@ primarily for maintenance and responding to user questions. Priorities
 on the development of new features are determined by the development
 team.
 
-## Additional Publication Details
+Additional Publication Details
+------------------------------
 
 Additional metadata about this publication, not found in other parts of
 the page is in this table.
@@ -192,14 +209,6 @@ DOI
 <tr>
 <th scope="row">
 Year published
-</th>
-<td>
-2023
-</td>
-</tr>
-<tr>
-<th scope="row">
-Year of version
 </th>
 <td>
 2023

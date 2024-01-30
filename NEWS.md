@@ -1,3 +1,7 @@
+# inlcolor 1.0.6
+
+- Add new color schemes collected by Wessel and others (2013).
+
 # inlcolor 1.0.5
 
 - Add Value section to `plot.inlpal` help documentation.

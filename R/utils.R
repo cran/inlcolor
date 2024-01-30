@@ -420,7 +420,7 @@ print_table <- function(d,
       xtable::label(tbl) <- label
     }
 
-    row_names <- utils::type.convert(rownames(d))
+    row_names <- utils::type.convert(rownames(d), as.is = TRUE)
     row_align <- ifelse(is.numeric(row_names), "r", "l")
     row_digits <- ifelse(is.double(row_names), format.info(row_names)[2], 0)
     if (!is.null(align)) xtable::align(tbl) <- c(row_align, align)
